@@ -1,0 +1,22 @@
+{
+    "bootstrap_idx": 0,
+    "model": "gandk",
+    "theta_est": [
+        3.3254926204681396,
+        2.8161306381225586,
+        6.783075332641602,
+        2.78385591506958
+    ],
+    "final_f": 0.0,
+    "params": {
+        "input_dataset": "datasets/gandk/N=1000/dataset_1.npy",
+        "output_dir": "results/gandk/npl_mmd/N1000/bandwidth_-1/dataset_1",
+        "model": "gandk",
+        "x0": null,
+        "bandwidth": -1.0,
+        "B": 2,
+        "m": 20,
+        "batch_size": 200,
+        "Nstep": 50
+    }
+}

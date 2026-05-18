@@ -1,0 +1,22 @@
+{
+    "bootstrap_idx": 0,
+    "model": "gandk",
+    "theta_est": [
+        2.794562339782715,
+        1.1417170763015747,
+        7.682782173156738,
+        0.8468937277793884
+    ],
+    "final_f": 0.0,
+    "params": {
+        "input_dataset": "datasets/gandk/N=5000/dataset_0.npy",
+        "output_dir": "results/gandk/timing_test_npl",
+        "model": "gandk",
+        "x0": null,
+        "bandwidth": -1.0,
+        "B": 1,
+        "m": 20,
+        "batch_size": 200,
+        "Nstep": 1000
+    }
+}

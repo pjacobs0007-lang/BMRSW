@@ -1,0 +1,18 @@
+# Core numeric and scientific computing
+numpy
+scipy
+pandas
+
+# Machine Learning and Optimization
+torch
+jax
+jaxlib
+cma
+POT
+
+# Parallel processing
+joblib
+
+# Data Visualization
+matplotlib
+seaborn

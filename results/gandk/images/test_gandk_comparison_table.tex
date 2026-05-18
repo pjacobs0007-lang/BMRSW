@@ -1,0 +1,16 @@
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llcc | cc | cc | cc | cc}
+\hline
+N & Method & $\lambda$ & Bandwidth & \multicolumn{2}{c|}{$a$} & \multicolumn{2}{c|}{$b$} & \multicolumn{2}{c|}{$g$} & \multicolumn{2}{c}{$k$} \\
+ & & & & Cov/Wid & MSE & Cov/Wid & MSE & Cov/Wid & MSE & Cov/Wid & MSE \\
+\hline
+1000 & B-MRSW & 0.5 & -- & 1.00 (1.71) & 0.3528 & 0.50 (0.61) & 0.1091 & 0.00 (0.07) & 1.9956 & 0.00 (0.10) & 0.0963 \\
+1000 & NPL-MMD & -- & Med. Heuristic & 0.00 (0.03) & 0.1160 & 0.00 (0.22) & 2.6838 & 0.00 (0.02) & 23.0534 & 0.00 (0.31) & 5.0602 \\
+\hline
+\end{tabular}
+}
+\caption{Comparison of G-and-K Inference Methods: Coverage, Median Interval Width (Wid), and MSE of Posterior Median per parameter}
+\label{tab:gandk_comparison}
+\end{table}

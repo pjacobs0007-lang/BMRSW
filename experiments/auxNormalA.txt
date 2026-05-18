@@ -1,0 +1,88 @@
+# ==============================================================================
+# IMPORTANT: Execution Directory
+# ==============================================================================
+# All the commands in this file use relative paths (e.g. `datasets/...`, `BMRSW.py`).
+# You MUST run these commands from within the `code/` directory.
+#
+#    cd path/to/sbi_investigations/black_box_v2/code
+#
+# Once inside the `code/` directory, you can copy and paste any of these commands 
+# directly into your terminal.
+# ==============================================================================
+
+python datasets/normalDataCreation.py \
+    --theta_true 0 1 \
+    --N 1000 \
+    --R 1 \
+    --contamOption A \
+    --eps 0.05 \
+    --nu 22 \
+    --z 10
+
+python BMRSW.py \
+    --mode lam_select \
+    --input_dataset datasets/normal/1000/contamOption=A/dataset_0.npy \
+    --M 6 \
+    --model normal \
+    --p_bounds -10 10 0.1 20 \
+    --x0 -5 0.15 \
+    --sga_iter 20000 \
+    --sga_batch 1 \
+    --burn_in_pct 60 \
+    --popsize 16 \
+    --max_gen 50 \
+    --sigma0 1 \
+    --tol 0.000001 \
+    --output_dir results/normal/contamOptionA/lamSelect
+
+python singleRun.py \
+    --lam 2.5 \
+    --input_dataset datasets/normal/1000/contamOption=A/dataset_0.npy \
+    --model normal \
+    --p_bounds -10 10 0.1 20 \
+    --x0 -5 0.15 \
+    --sga_iter 20000 \
+    --sga_batch 1 \
+    --burn_in_pct 60 \
+    --popsize 16 \
+    --max_gen 50 \
+    --sigma0 1 \
+    --tol 0.000001 \
+    --output_dir results/normal/bmrsw/contamOptionA/singleRun
+
+python BMRSW.py \
+    --mode performUQ \
+    --lam 2.5 \
+    --input_dataset datasets/normal/1000/contamOption=A/dataset_0.npy \
+    --M 100 \
+    --model normal \
+    --p_bounds -10 10 0.1 20 \
+    --x0 -5 0.15 \
+    --sga_iter 20000 \
+    --sga_batch 1 \
+    --burn_in_pct 60 \
+    --popsize 16 \
+    --max_gen 50 \
+    --sigma0 1 \
+    --tol 0.000001 \
+    --output_dir results/normal/bmrsw/contamOptionA/performUQ
+
+python bernton_minWasser.py \
+    --dataset datasets/normal/1000/contamOption=A/dataset_0.npy \
+    --model normal \
+    --loMu -10 --hiMu 10 --initMu -5 \
+    --loSig 0.1 --hiSig 20 --initSig 0.15 \
+    --K 20 \
+    --M_sim 10000 \
+    --num_bootstraps 100 \
+    --output_dir results/normal/wasser/contamOptionA
+
+python viz_creator_normal.py \
+    --model normal \
+    --N 1000 \
+    --contamOption A \
+    --eps 0.05 \
+    --nu 22 \
+    --z 10 \
+    --lamsForPlot 2.5 \
+    --output results/normal/images/contamOptionA.pdf

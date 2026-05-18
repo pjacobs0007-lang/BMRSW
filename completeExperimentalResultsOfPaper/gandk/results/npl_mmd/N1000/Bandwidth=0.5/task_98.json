@@ -1,0 +1,1 @@
+{"task_id": 98, "dataset_id": 0, "theta_est": [3.0324652194976807, 1.5727943181991577, 7.311568737030029, 0.759803295135498], "final_f": 0.0, "params": {"task_id": 0, "a": 3.0, "b": 1.0, "g": 2.0, "k": 0.5, "N": 1000, "bandwidth": 0.5, "B": 100, "m": 20, "batch_size": 200, "data_dir": "gs://sbi-sims-data-results/gandk/experimentalData/N1000", "bucket": "sbi-sims-data-results"}}

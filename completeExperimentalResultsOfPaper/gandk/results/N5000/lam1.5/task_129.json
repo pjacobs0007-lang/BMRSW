@@ -1,0 +1,53 @@
+{
+    "task_id": 129,
+    "mode": "production",
+    "dataset_id": 1,
+    "lambda": 1.5,
+    "theta_est": [
+        2.9509332316815686,
+        0.9394141964851179,
+        1.93688762280436,
+        0.4764259957250567
+    ],
+    "final_f": -0.24346137046813965,
+    "w2_fit_reweighted": null,
+    "params": {
+        "ground_truth_data": "gs://sbi-sims-data-results/gandk/experimentalData/N5000/dataset",
+        "bucket": "sbi-sims-data-results",
+        "results_prefix": "gandk/results/N5000/lam1.5",
+        "task_id": 129,
+        "loA": -10.0,
+        "hiA": 10.0,
+        "initA": 5.0,
+        "loB": 0.1,
+        "hiB": 10.0,
+        "initB": 0.15,
+        "log": 0.03,
+        "hig": 40.0,
+        "initg": 0.05,
+        "lok": 0.05,
+        "hik": 3.0,
+        "initk": 0.06,
+        "theta_true": [
+            3.0,
+            1.0,
+            2.0,
+            0.5
+        ],
+        "eval_mode": "sga",
+        "sga_iter": 20000,
+        "sga_batch": 1,
+        "no_log_k": true,
+        "lam": 1.5,
+        "burn_in_pct": 60.0,
+        "optMode": "CMAES",
+        "popsize": 16,
+        "max_gen": 50,
+        "sigma0": 1.0,
+        "tolfun": 1e-06,
+        "n_jobs": -1,
+        "mode": "production",
+        "numRepsLamSelectMode": 10,
+        "N_data": 5000
+    }
+}

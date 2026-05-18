@@ -1,0 +1,53 @@
+{
+    "task_id": 186,
+    "mode": "lam_select",
+    "dataset_id": 0,
+    "lambda": 0.517947467923121,
+    "theta_est": [
+        2.998243373141824,
+        1.1621908866697928,
+        2.0135219142449463,
+        0.3121885634438844
+    ],
+    "final_f": -0.02661954406178391,
+    "w2_fit_reweighted": 11.127729521514107,
+    "params": {
+        "ground_truth_data": "gs://sbi-sims-data-results/gandk/experimentalData/N1000/dataset",
+        "bucket": "sbi-sims-data-results",
+        "results_prefix": "results_v2",
+        "task_id": 186,
+        "loA": -10.0,
+        "hiA": 10.0,
+        "initA": 5.0,
+        "loB": 0.1,
+        "hiB": 10.0,
+        "initB": 0.15,
+        "log": 0.03,
+        "hig": 40.0,
+        "initg": 0.05,
+        "lok": 0.05,
+        "hik": 3.0,
+        "initk": 0.06,
+        "theta_true": [
+            3.0,
+            1.0,
+            2.0,
+            0.5
+        ],
+        "eval_mode": "sga",
+        "sga_iter": 20000,
+        "sga_batch": 1,
+        "no_log_k": true,
+        "lam": 0.517947467923121,
+        "burn_in_pct": 60.0,
+        "optMode": "CMAES",
+        "popsize": 16,
+        "max_gen": 50,
+        "sigma0": null,
+        "tolfun": 1e-06,
+        "n_jobs": -1,
+        "mode": "lam_select",
+        "numRepsLamSelectMode": 15,
+        "N_data": 1000
+    }
+}

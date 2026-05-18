@@ -1,0 +1,57 @@
+{
+    "model": "normal",
+    "dataset": "datasets/normal/1000/contamOption=A/dataset_0.npy",
+    "K": 10,
+    "M_sim": 100,
+    "num_bootstraps": 2,
+    "p_ci": 0.05,
+    "credible_intervals_lower": [
+        0.4740746467966476,
+        1.8084043427957315
+    ],
+    "credible_intervals_upper": [
+        0.5316961538368928,
+        1.952071784267905
+    ],
+    "bootstrap_estimates": [
+        [
+            0.5332125092853204,
+            1.9558525064119094
+        ],
+        [
+            0.47255829134822014,
+            1.804623620651727
+        ]
+    ],
+    "total_time_s": 0.36717820167541504,
+    "args": {
+        "dataset": "datasets/normal/1000/contamOption=A/dataset_0.npy",
+        "model": "normal",
+        "loA": 0.0,
+        "hiA": 5.0,
+        "initA": null,
+        "loB": 0.0,
+        "hiB": 2.0,
+        "initB": null,
+        "log": 0.0,
+        "hig": 5.0,
+        "initg": null,
+        "lok": 0.0,
+        "hik": 2.0,
+        "initk": null,
+        "loMu": -10.0,
+        "hiMu": 10.0,
+        "initMu": -5.0,
+        "loSig": 0.1,
+        "hiSig": 20.0,
+        "initSig": 0.15,
+        "K": 10,
+        "M_sim": 100,
+        "num_bootstraps": 2,
+        "p_ci": 0.05,
+        "seed": 42,
+        "no_log_k": false,
+        "output_file": "bernton_minWasser_results.json",
+        "output_dir": "results/normal/wasser/contamOptionA"
+    }
+}
